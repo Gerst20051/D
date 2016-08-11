@@ -11,5 +11,7 @@ shared static this()
 void handleRequest(HTTPServerRequest req, HTTPServerResponse res)
 {
     if (req.path == "/")
+        res.render!"index.dt";
+    else
         res.writeBody("Hello, World!", "text/plain");
 }
